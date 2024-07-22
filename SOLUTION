@@ -1,0 +1,19 @@
+// app.js
+const perspective = require("@finos/perspective");
+
+// Create some sample data
+const data = [
+    { name: "Apple", price: 150, volume: 100 },
+    { name: "Google", price: 2800, volume: 200 },
+    { name: "Microsoft", price: 299, volume: 150 },
+    { name: "Amazon", price: 3500, volume: 250 },
+];
+
+// Create a Perspective table
+const table = perspective.table(data);
+
+// Get the perspective-viewer element
+const viewer = document.querySelector("perspective-viewer");
+
+// Load the table into the viewer
+viewer.load(table);
